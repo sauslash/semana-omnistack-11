@@ -1,0 +1,11 @@
+--criar o package.json
+npm init -y
+
+--instalar express
+npm install express
+
+--instalar nodemon
+npm install nodemon -D
+
+--instalar o cors
+npm install cors

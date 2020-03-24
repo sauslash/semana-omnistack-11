@@ -1,0 +1,20 @@
+--cria o projeto sem instalar global
+npx create-react-app frontend
+
+--instalar o knex - query builder para diversos bancos
+npm install knex
+
+--instalar sqllite
+npm install sqlite3
+
+--criar arquivo knexfile
+npx knex init
+
+--criar primeiro migrations
+npx knex migrate:make create_ongs
+
+--executa migrations
+npx knex migrate:latest
+
+--rollback migrations da ultima execucao
+npx knex migrate:rollback
