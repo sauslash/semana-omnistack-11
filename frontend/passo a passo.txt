@@ -1,0 +1,5 @@
+--instalar icones
+npm install react-icons
+
+--instalar react-router-dom para as rotas
+npm install react-router-dom
