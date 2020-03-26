@@ -1,0 +1,47 @@
+--rodar mobile com expo
+npm start
+
+--referencia rocketseat sobre expo
+google expo common issues rocketseat
+
+--emulando react native com expo 
+https://www.youtube.com/watch?v=eSjFDWYkdxM&vl=pt
+
+--instala expo
+npm install -g expo-cli
+
+--cria o projeto com expo
+expo init mobile
+
+--inicia o projeto
+npm start
+
+--baixar no celular o app expo
+--scanear o qrcode para ver o app rodar
+
+--url da documentacao
+https://reactnavigation.org/docs/en/getting-started.html
+
+--instal expo-module-scripts
+npm install --save-dev expo-module-scripts
+
+--instalar o react navigation
+npm install @react-navigation/native
+
+--instalar dependencias do expo
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+
+--instalar react-navigation-stack para navegacao por pilhas
+npm install @react-navigation/stack
+
+--instalar expo constants
+expo install expo-constants
+
+--instalar expo compose para criar email
+expo install expo-mail-composer
+
+
+
+--instalar o axios
+yarn add axios
+
