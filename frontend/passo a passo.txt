@@ -6,3 +6,9 @@ npm install react-router-dom
 
 --axios
 npm install axios
+
+--instalar mascara no react
+npm install react-text-mask
+
+--instalar modal no react
+npm install sweetalert

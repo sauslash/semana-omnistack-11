@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import swal from 'sweetalert';
+import MaskedInput from 'react-text-mask';
 import axios from '../../services/api';
 
 import './styles.css';
@@ -30,13 +32,27 @@ export default function Register() {
 
         try
         {
-            const response = await axios.post('ongs', data);
-            alert(`Seu ID de acesso: ${response.data.id}`);
+            const response = await axios.post('ongs', data);            
+
+            swal({
+                title: `Seu ID de acesso é: ${response.data.id}`,
+                text: "Copie para efetuar o logon!",
+                icon: "success",
+                button: true,
+                dangerMode: true,
+            });
+
             history.push('/');
         }
         catch(err)
         {
-            alert('Erro no cadastro');
+            swal({
+                title: "Erro ao cadastrar!",
+                text: "Tente nomvamente.",
+                icon: "error",
+                button: true,
+                dangerMode: true,
+            });
         }
     }
 
@@ -51,7 +67,7 @@ export default function Register() {
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#e02041" />
-                        Não tenho cadastro
+                        Já tenho cadastro
                     </Link>
                 </section>
                 
@@ -65,10 +81,14 @@ export default function Register() {
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    <input 
+                    <MaskedInput 
                         placeholder="WhatsApp"
                         value={whatsapp}
                         onChange={e => setWhatsApp(e.target.value)}
+                        maxLength={16}
+                        guide={false}
+                        onBlur={() => {}}
+                        mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
                     />
                     <div className="input-group">
                         <input 
