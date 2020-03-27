@@ -1,7 +1,7 @@
 --rodar mobile com expo
 npm start
 
---referencia rocketseat sobre expo
+--referencia rocketseat sobre expo (se nunca tiver instaldo)
 google expo common issues rocketseat
 
 --emulando react native com expo 
@@ -40,8 +40,9 @@ expo install expo-constants
 --instalar expo compose para criar email
 expo install expo-mail-composer
 
-
-
 --instalar o axios
-yarn add axios
+npm install axios
 
+
+--instalar intl para formatar dados
+npm install intl
