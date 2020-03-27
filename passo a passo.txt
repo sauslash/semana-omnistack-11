@@ -19,19 +19,19 @@ npx knex migrate:latest
 --rollback migrations da ultima execucao
 npx knex migrate:rollback
 
---hospedar api node gratuitamente no heroku (aplicacoes simples para teste, aplicações grandes seria caro)
+--hospedar api node gratuitamente no heroku (aplicacoes simples para teste, aplicaÃ§Ãµes grandes seria caro)
 https://www.heroku.com/
 
 --como fazer
 https://www.youtube.com/watch?v=-j7vLmBMsEU
 
---hospedar api node digital ocean (aplicação comercial)
+--hospedar api node digital ocean (aplicaÃ§Ã£o comercial)
 https://www.digitalocean.com/pricing/
 
 --como fazer
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
 
---hospedat reactjs netlify (aplicativos simples para teste aplicações grandes seria caro)
+--hospedat reactjs netlify (aplicativos simples para teste aplicaÃ§Ãµes grandes seria caro)
 https://www.netlify.com/pricing/
 
 --como gerar o apk criado no expo
@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=wYMvzbfBdYI
 --padroes de codigo eslint e prettier
 https://www.youtube.com/watch?v=TI4v4Y8yRjw
 
---criando uma api do zero com autenticação
+--criando uma api do zero com autenticaÃ§Ã£o
 https://www.youtube.com/watch?v=BN_8bCfVp88&list=PL85ITvJ7FLoiXVwHXeOsOuVppGbBzo2dp&index=1
 
 --styled components

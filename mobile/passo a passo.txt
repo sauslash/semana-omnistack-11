@@ -1,7 +1,7 @@
 --rodar mobile com expo
 npm start
 
---referencia rocketseat sobre expo (se nunca tiver instaldo)
+--referencia rocketseat sobre expo (se nunca tiver instalado)
 google expo common issues rocketseat
 
 --emulando react native com expo 
