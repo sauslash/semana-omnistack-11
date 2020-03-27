@@ -1,4 +1,4 @@
---criar o package.json
+﻿--criar o package.json
 npm init -y
 
 --instalar express
@@ -28,30 +28,3 @@ https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
 --instalar supertest para fazer chamadas api para teste de integração
 npm install supertest
 
---hospedar api node gratuitamente no heroku (aplicacoes simples para teste, aplicações grandes seria caro)
-https://www.heroku.com/
-
---como fazer
-https://www.youtube.com/watch?v=-j7vLmBMsEU
-
---hospedar api node digital ocean (aplicação comercial)
-https://www.digitalocean.com/pricing/
-
---como fazer
-https://www.youtube.com/watch?v=ICIz5dE3Xfg
-
---hospedat reactjs netlify (aplicativos simples para teste aplicações grandes seria caro)
-https://www.netlify.com/pricing/
-
---como gerar o apk criado no expo
-https://www.youtube.com/watch?v=wYMvzbfBdYI
-
---padroes de codigo eslint e prettier
-https://www.youtube.com/watch?v=TI4v4Y8yRjw
-
---criando uma api do zero com autenticação
-https://www.youtube.com/watch?v=BN_8bCfVp88&list=PL85ITvJ7FLoiXVwHXeOsOuVppGbBzo2dp&index=1
-
---styled components
-https://www.youtube.com/watch?v=R3S8DEzEn6s
-https://www.youtube.com/watch?v=ngVU74daJ8Y
