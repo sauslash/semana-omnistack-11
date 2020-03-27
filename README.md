@@ -30,11 +30,6 @@
       <td>React Native - Expo</td>
     </tr>
     <tr>
-      <td>ExpressJs</td>
-      <td>Styled-Components</td>
-      <td>Styled-Components</td>
-    </tr>
-    <tr>
       <td>SqLite</td>
       <td>Axios</td>
       <td>Axios</td>
