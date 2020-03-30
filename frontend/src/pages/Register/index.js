@@ -45,7 +45,7 @@ export default function Register() {
             history.push('/');
         }
         catch(err)
-        {
+        {            
             swal({
                 title: "Erro ao cadastrar!",
                 text: "Tente nomvamente.",
