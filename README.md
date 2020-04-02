@@ -41,13 +41,13 @@
     </tr>
     <tr>
       <td>Cors</td>
-      <td>Eslint</td>
-      <td>Eslint</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <td>Knex</td>
-      <td>Prettier</td>
-      <td>Prettier</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
   </tbody>
 </table>
