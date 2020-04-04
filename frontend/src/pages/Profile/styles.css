@@ -65,7 +65,15 @@
     border: 0;
 }
 
+.profile-container ul li button + button {
+    margin-right: 40px;
+}
+
 .profile-container ul li button:hover {
+    opacity: 0.8;
+}
+
+.profile-container ul li button + button:hover {
     opacity: 0.8;
 }
 

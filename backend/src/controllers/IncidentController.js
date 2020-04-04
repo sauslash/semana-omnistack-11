@@ -4,21 +4,20 @@ module.exports = {
     async index(request, response) {
 
         const { page = 1 } = request.query;
-        
         const [count] = await connection('incidents').count();
-        
+
         const incidents = await connection('incidents')
-        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
-        .limit(5)
-        .offset((page - 1) * 5)
-        .select([
-            'incidents.*', 
-            'ongs.name', 
-            'ongs.email', 
-            'ongs.whatsapp', 
-            'ongs.city', 
-            'ongs.uf'
-        ]);
+            .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+            .limit(5)
+            .offset((page - 1) * 5)
+            .select([
+                'incidents.*',
+                'ongs.name',
+                'ongs.email',
+                'ongs.whatsapp',
+                'ongs.city',
+                'ongs.uf'
+            ]);
 
         response.header('X-Total-Count', count['count(*)']);
 
@@ -38,7 +37,28 @@ module.exports = {
         });
 
         //return response.json({ id: result[0] });
-        return response.json({ id });        
+        return response.json({ id });
+    },
+
+    async update(req, res) {
+        const { id } = req.params;
+        const ong_id = req.headers.authorization;
+
+        const incident = await connection('incidents').where({
+            id,
+            ong_id,
+        });
+
+        if (!incident) return res.status(404).json({ error: 'Incident not found' });
+
+        await connection('incidents')
+            .where({
+                id,
+                ong_id,
+            })
+            .update(req.body);
+
+        return res.status(204).send();
     },
 
     async delete(request, response) {
@@ -46,12 +66,12 @@ module.exports = {
         const ong_id = request.headers.authorization;
 
         const incidents = await connection('incidents')
-        .where('id', id)
-        .select('ong_id')
-        .first();
+            .where('id', id)
+            .select('ong_id')
+            .first();
 
-        if(incidents.ong_id !== ong_id){
-            return response.status(401).json({error: 'Operation not permitted'});
+        if (incidents.ong_id !== ong_id) {
+            return response.status(401).json({ error: 'Operation not permitted' });
         }
 
         await connection('incidents').where('id', id).delete();

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { FiPower, FiTrash2, FiEdit } from 'react-icons/fi';
+import swal from 'sweetalert';
 
 import './styles.css';
 import logoImg from '../../assets/logo.svg';
@@ -39,6 +40,20 @@ export default function Profile() {
         }
     }
 
+    async function handleEditIncident(incident) {
+        try {
+          history.push(`/incident/edit/${incident.id}`);
+        } catch (error) {
+            swal({
+                title: "Erro ao cadastrar!",
+                text: "Tente novamente.",
+                icon: "error",
+                button: true,
+                dangerMode: true,
+            });
+        }
+    }
+
     function handleLogout() {
         localStorage.clear();
         history.push('/');
@@ -73,6 +88,9 @@ export default function Profile() {
                             
                             <button onClick={() => handleDeleteIncident(incident.id)} type="button">
                                 <FiTrash2 size={20} color="#a8a8b3" />
+                            </button>
+                            <button onClick={() => handleEditIncident(incident)} type="button">
+                                <FiEdit size={20} />
                             </button>
                         </li>
                     ))) : (<h1>Nenhum caso registrado</h1>)

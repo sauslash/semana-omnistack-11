@@ -12,3 +12,10 @@ npm install react-text-mask
 
 --instalar modal no react
 npm install sweetalert
+
+
+--instalar formatar valor
+npm install react-number-format
+
+--outra opcao de modal
+npm install @material-ui/core
