@@ -18,7 +18,6 @@ export default function EditIncident() {
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
 
-    const [error, setError] = useState('');
     const [incident, setIncident] = useState({});
 
     const ongId = localStorage.getItem('ongId');
@@ -42,7 +41,8 @@ export default function EditIncident() {
             icon: "error",
             button: true,
             dangerMode: true,
-        });
+          });
+
           history.push('/profile');
         }
       }
@@ -79,17 +79,14 @@ export default function EditIncident() {
   
         history.push('/profile');
       } catch (errors) {
-        setError('');
-  
-        const data = {
-          open: true,
-          title: 'Erro ao editar caso!',
-          info: 'Erro ao editar o cadastro, tente novamente!',
-          action: 'handleClose',
-          error: errors.toString(),
-        };
-  
-        setError(data);
+        swal({
+          title: "Erro ao editar Incidente!",
+          text: "Tente novamente.",
+          icon: "error",
+          button: true,
+          dangerMode: true,
+        });
+
       }
     }
 

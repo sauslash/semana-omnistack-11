@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
+import swal from 'sweetalert';
 import axios from '../../services/api';
 
 import './styles.css';
@@ -25,7 +26,13 @@ function Logon() {
             history.push('/profile');
         }
         catch(err) {
-            alert('Falha no login');
+            swal({
+                title: "Falha ao fazer o login!",
+                text: "Tente novamente.",
+                icon: "error",
+                button: true,
+                dangerMode: true,
+              });
         }
             
     }

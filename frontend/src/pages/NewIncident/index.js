@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import NumberFormat from 'react-number-format';
+import swal from 'sweetalert';
 import axios from '../../services/api';
 
 import './styles.css';
@@ -20,11 +22,12 @@ export default function NewIncident() {
     async function handleNewIncident(e) {
         e.preventDefault();
 
+        const formatValue = value.replace(/\D*/, '').replace(',', '');
         const data = {
             title,
             description,
-            value
-        }
+            value: Number(formatValue),
+        };
 
         try
         {
@@ -38,7 +41,13 @@ export default function NewIncident() {
         }
         catch(err)
         {
-            alert('Não foi possível cadastrar.');
+            swal({
+                title: "Erro ao fazer o cadastro!",
+                text: "Tente novamente.",
+                icon: "error",
+                button: true,
+                dangerMode: true,
+              });
         }
     }
 
@@ -68,10 +77,12 @@ export default function NewIncident() {
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
-                    <input 
-                        placeholder="Valor em reais"
-                        value={value}
-                        onChange={e => setValue(e.target.value)}
+                    <NumberFormat
+                      placeholder="Valor em reais"
+                      value={value}
+                      prefix="R$"
+                      thousandSeparator
+                      onChange={e => setValue(e.target.value)}
                     />
 
                     <button className="button" type="submit">Cadastrar</button>
