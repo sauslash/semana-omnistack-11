@@ -48,7 +48,7 @@ export default function Register() {
         {            
             swal({
                 title: "Erro ao cadastrar!",
-                text: "Tente nomvamente.",
+                text: "Tente novamente.",
                 icon: "error",
                 button: true,
                 dangerMode: true,
@@ -60,15 +60,12 @@ export default function Register() {
         <div className="register-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Be The Hero" />
+                    <img className="logo" src={logoImg} alt="Be The Hero" />
 
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos de sua ONG</p>
 
-                    <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#e02041" />
-                        Já tenho cadastro
-                    </Link>
+                    <Link className="back-link" to="/"><FiArrowLeft size={26} color="#e02041" /> Já tenho cadastro</Link>
                 </section>
                 
                 <form onSubmit={handleRegister}>

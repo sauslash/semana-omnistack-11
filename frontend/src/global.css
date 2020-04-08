@@ -71,6 +71,7 @@ form textarea {
     text-decoration: none;
     font-weight: bold;    
     transition: opacity 0.2s;
+    font-size: 1.3rem;
 }
 
 .back-link svg{

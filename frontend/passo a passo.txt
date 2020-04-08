@@ -1,3 +1,6 @@
+-- criar aplicativo
+create-react-app curso-react
+
 --instalar icones
 npm install react-icons
 

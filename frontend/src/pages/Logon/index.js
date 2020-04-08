@@ -1,5 +1,5 @@
 //rsf component function
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import swal from 'sweetalert';
@@ -17,47 +17,42 @@ function Logon() {
 
     async function handleLogin(e) {
         e.preventDefault();
-        
-        try
-        {
+
+        try {
             const response = await axios.post('sessions', { id });
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
             history.push('/profile');
         }
-        catch(err) {
+        catch (err) {
             swal({
                 title: "Falha ao fazer o login!",
                 text: "Tente novamente.",
                 icon: "error",
                 button: true,
                 dangerMode: true,
-              });
+            });
         }
-            
+
     }
 
     return (
-        <div className="logon-container">
+        
+        <div className="logo-container">
             <section className="form">
-                <img src={ logoImg } alt="Be The Hero" />
-                <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
-                    <input 
-                        placeholder="Sua ID" 
-                        value={id}
-                        onChange={e => setId(e.target.value)}
-                    />
-                    <button className="button" type="submit">Entrar</button>
+                <img className="logo" src={logoImg} alt="Be The Hero" />
 
-                    <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#e02041" />
-                        Não tenho cadastro
-                    </Link>
+                <form noValidate autoComplete="off" onSubmit={handleLogin}>
+                    <h1>Faça seu logon</h1>
+
+                    <input type="text" placeholder="Sua ID" value={id} onChange={e => setId(e.target.value)} />
+                    <button className="button" type="submit" disabled={!id}>Entrar</button>
+
+                    <Link className="back-link" to="/register"><FiLogIn size={26} color="#e02041" /> Não tenho cadastro</Link>
                 </form>
             </section>
 
-            <img src={ heroesimg } alt="Heroes" />
+            <img className="heroes" src={heroesimg} alt="Heroes" />
         </div>
     );
 }

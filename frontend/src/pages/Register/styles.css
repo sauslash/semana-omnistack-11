@@ -1,7 +1,7 @@
 .register-container {
     width: 100%;
     max-width: 1120px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
 
     display: flex;
@@ -25,6 +25,10 @@
 .register-container .content section {
     width: 100%;
     max-width: 380px;
+}
+
+.register-container .logo {
+  width: 100%;
 }
 
 .register-container .content section h1 {
@@ -54,3 +58,89 @@
 .register-container .content form .input-group input + input {
     margin-left: 8px;
 }
+
+@media (max-width: 906px) {
+    .register-container .content section h1 {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .register-container .content section h1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .register-container .logo {
+      width: 75%;
+    }
+  }
+  
+  @media (max-width: 620px) {
+    .register-container .content {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .register-container .content section {
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .register-container .content section h1 {
+      display: none;
+    }
+  
+    .register-container .content section p {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  
+    /* .register-container .content section > a {
+      display: none;
+    } */
+  
+    .register-container .content > a {
+      display: inline-block;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .register-container .content section p {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 538px) {
+    .register-container .content section p {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 496px) {
+    /* .register-container .content section p {
+      display: none;
+    } */
+  
+    .register-container .content form {
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 458px) {
+    /* .register-container {
+      padding: 0 1rem;
+    } */
+  
+    .register-container .content {
+      padding: 2rem;
+    }
+  
+
+  }
