@@ -91,3 +91,21 @@
     color: #737380;
 }
 
+.pageController
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.pageController p {
+    font-size: 20px;
+    color: #e02041;
+    font-weight: bold;
+}
+
+.pageController Button {
+    background: #e02041;
+}

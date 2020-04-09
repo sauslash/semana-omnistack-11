@@ -22,9 +22,13 @@ routes.post('/ongs', celebrate({
 }), ongController.create);
 
 routes.get('/profile', celebrate({
+    [Segments.QUERY]: Joi.object().keys({
+        page: Joi.number()
+    }),
     [Segments.HEADERS]: Joi.object({
         authorization: Joi.string().required()
     }).unknown()
+    
 }), profileController.index);
 
 routes.get('/incidents', celebrate({
