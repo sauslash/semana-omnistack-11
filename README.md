@@ -12,10 +12,10 @@
   <a aria-label="Completed" href="#">
     <img src="https://img.shields.io/badge/OmniStack-done-green?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEVHcExxWsF0XMJzXMJxWcFsUsD///9jRrzY0u6Xh9Gsn9n39fyMecy0qd2bjNJWBT0WAAAABHRSTlMA2Do606wF2QAAAGlJREFUGJVdj1cWwCAIBLEsRU3uf9xobDH8+GZwUYi8i6ucJwrxKE+7D0G9Q4vlYqtmCSjndr4CgCgzlyFgfKfKCVO0LrPKjmiqMxGXkJwNnXskqWG+1oSM+BSwD8f29YLNjvx/OQrn+g99oQSoNmt3PgAAAABJRU5ErkJggg=="></img>
   </a>
-  <img src="frontend/src/assets/heroes.png" align="center"></img>
+  <img src="assets/heroes.png" align="center"></img>
 </p>
 
-## :rocket: Tecnologias
+## :rocket: Technologies
 
 <table>
   <thead>
@@ -52,7 +52,7 @@
   </tbody>
 </table>
 
-## Instalation
+## Setup
 To install the dependencies and to execute the **Backend**, clone the project on your computer an execute:
 ```bash
 cd backend
